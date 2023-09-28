@@ -109,7 +109,6 @@ class ClientLogic {
          ClientLogic.this.closeSocket();
       }
    } // for tests
-
    public Socket getSocket() { //for test
       return socket;
    } // for tests

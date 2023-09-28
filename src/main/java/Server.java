@@ -70,10 +70,9 @@ class ServerLogic extends Thread {
       }
    }
 
-   public Socket getSocket() {
+   public Socket getSocket() { // for tests
       return socket;
-   } // for tests
-
+   }
    public ServerLogic() throws IOException { // for tests
       this.socket = new Socket("localhost", Utils.getPortFromSettingsFile());
       in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -81,7 +80,6 @@ class ServerLogic extends Thread {
       out = new BufferedWriter(stringWriter);
       start();
    }
-
    public StringWriter getStringWriter() { // for tests
       return stringWriter;
    } // for tests
